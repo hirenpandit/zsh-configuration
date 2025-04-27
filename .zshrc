@@ -73,7 +73,7 @@ ZSH_THEME="daivasmara"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-interactive-cd httpie)
+plugins=(git zsh-interactive-cd httpie zsh-autosuggestions)
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 autoload -U compinit && compinit
@@ -125,3 +125,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # LS Colours - set colour for directories and file names when LS command is fired
 export CLICOLORS=1
 export LSCOLORS="bxFxCxDxBxegedabagacad"
+
+# Autocomplete
+autoload -Uz compinit
+compinit
